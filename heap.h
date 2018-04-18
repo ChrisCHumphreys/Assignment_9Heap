@@ -9,12 +9,15 @@
 #ifndef heap_h
 #define heap_h
 
-#include<vector> //vector data structure
+#include<vector>   //vector data structure
+#include<iostream> //STDIN, STDOUT
 
 class heap {
 private:
     std::vector<int> buffer;
     void insertHelper(int parentIndex, int insertIndex);
+    void max_helper(int index);
+    void swap(int indexA, int indexB);
     
 public:
     heap();
