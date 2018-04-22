@@ -245,11 +245,11 @@ void heap<type>::max_helper(int index)
     
     // if leafs are larger than size of array they dont
     // exist yet.
-    if (leftIndex > buffer.size() - 1)
+    if (leftIndex > int(buffer.size()) - 1)
     {
         leftIndex = index;
     }
-    if (rightIndex > buffer.size() - 1)
+    if (rightIndex > int(buffer.size()) - 1)
     {
         rightIndex = index;
     }
@@ -309,7 +309,7 @@ template <class type>
 void heap<type>::print()
 {
     // just loop through and print all the values in the heap
-    for (int i = 1; i < buffer.size(); i++)
+    for (int i = 1; i < int(buffer.size()); i++)
     {
         std::cout << buffer[i] << " ";
     }
