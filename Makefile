@@ -26,13 +26,13 @@ CFLAGS=-c -Wall $(DEBUG)
 all: $(TARGET)
 
 $(TARGET): main.o heap.o
-	$(CC) main.o heap.o -o $(TARGET) $(MEMFLAGS)
+	$(CC) main.o -o $(TARGET) $(MEMFLAGS)
 
 main.o: main.cpp heap.h
 	$(CC) $(CFLAGS) $(MEMFLAGS) main.cpp
 
-heap.o: heap.cpp heap.h
-	$(CC) $(CFLAGS) $(MEMFLAGS) heap.cpp
+heap.o: heap.h
+	$(CC) $(CFLAGS) $(MEMFLAGS) heap.h
 
 clean:
 	rm -f *.o *~ *.swp $(TARGET)
