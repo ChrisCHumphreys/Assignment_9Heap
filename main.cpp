@@ -32,13 +32,15 @@ int main()
     // print function
     h.print();
     
+    cout << "PRINT FROM REMOVE MAX" << endl;
+    
+    for (int i = 0; i < 10; i++)
+    {
+        cout << h.max() << " ";
+        h.remove_max();
+    }
     cout << endl;
-    
-    h.remove_max();
-    //h.remove_max();
 
-    
-    h.print();
 
     return 0;
 }
